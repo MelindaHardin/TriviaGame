@@ -1,0 +1,11 @@
+body {
+    background-image: 
+    background-size: cover;
+    background-repeat: no-repeat;
+        
+}
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
