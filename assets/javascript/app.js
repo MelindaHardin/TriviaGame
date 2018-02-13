@@ -1,4 +1,19 @@
-//click start button. 
+
+function start(){
+    questionOne();
+
+}
+
+function questionOne(){
+    
+
+}
+
+//click start button.
+
+$("#start-button").on("click",questionOne);
+
+
 
 //  goes to next screen displaying...
 
@@ -9,10 +24,16 @@
 //          pointer on hover
 //          when wrong answer is clicked= "nope" and displays picture with correct answer and move to next question and timer restarts
 
+
+
+
 //  after all quesions answered
 //      timer stops
 //      displays correct, incorrect and unanswered questions.
 //      start over button (highlights on hover)
+
+
+
 
 //  start over clicked
 //      resets the game, NOT reloads the page. 
