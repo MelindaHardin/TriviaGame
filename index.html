@@ -11,126 +11,90 @@
 </head>
 
 <body>
-    <div id="container">
-        <h1>Who Said That?</h1>
-        <h2 id="timer"></h2>
 
-       <button id="start-button">Start Game</button>
+<div id="container">  
+    <h1>Who Said That?</h1> <br>
 
-        <form class="questions" id="q1" data-question="1">
-            <h3>1. "Life is like a box of chocolates, you never know what you're gonna get."</h3>
-            <ul>
-                <li> <input type="button" name="q1" value="Name 1"/></li>
-                <li> <input type="button" name="q1" value="Name 2"/></li>
-                <li> <input type="button" name="q1" value="Forrest Gump played by Tom Hanks"/></li>
-                <li> <input type="button" name="q1" value="Name 4"/></li>                  
-            </ul>
-            
+    <h2 id="timer"></h2><br>
+
+    <div id="results"></div>
+
+    <div id="body">
+        <form name="quizForm" onsubmit="return submitAnswers()">
+
+            <h3>1) "Life is like a box of chocolates, you never know what you're gonna get."</h3>
+            <input type="radio" name="q1" value="a" id="q1a">Forrest Gump<br>
+            <input type="radio" name="q1" value="b" id="q1b">Sheriff Woody;<br>
+            <input type="radio" name="q1" value="c" id="q1c">Chuck Noland;<br>
+            <input type="radio" name="q1" value="c" id="q1d">Old Paul Edgecomb;<br>
+
+            <h3>2) "Show me the money!"</h3>
+            <input type="radio" name="q2" value="a" id="q2a">Lt. Daniel Kaffee<br>
+            <input type="radio" name="q2" value="b" id="q2b">Ethan Hunt<br>
+            <input type="radio" name="q2" value="c" id="q2c">Jerry Maguire<br>
+            <input type="radio" name="q2" value="c" id="q2d">Joel Goodsen<br>
+
+            <h3>3) "To protect the sheep, you gotta catch the wolf, and it takes a wolf to catch a wolf."</h3>
+            <input type="radio" name="q3" value="a" id="q3a">Frank Lucas<br>
+            <input type="radio" name="q3" value="b" id="q3b">Coach Herman Boone<br>
+            <input type="radio" name="q3" value="c" id="q3c">Robert McCall<br>
+            <input type="radio" name="q3" value="c" id="q3d">Alonzo Harris<br>
+
+            <h3>4) "You got knocked the f*** out!"</h3>
+            <input type="radio" name="q4" value="a" id="q4a">Smokey<br>
+            <input type="radio" name="q4" value="b" id="q4b">Detective James Carter<br>
+            <input type="radio" name="q4" value="c" id="q4c">Johnny Booze<br>
+            <input type="radio" name="q4" value="c" id="q4d">Ruby Rhod<br>
+
+            <h3>5) "Wiggle your big toe."</h3>
+            <input type="radio" name="q5" value="a" id="q5a">Cecile de Volanges<br>
+            <input type="radio" name="q5" value="b" id="q5b">Mia wallace<br>
+            <input type="radio" name="q5" value="c" id="q5c">"The Bride"<br>
+            <input type="radio" name="q5" value="c" id="q5d">Ulla<br>
+
+            <h3>6) "Either they don't know, don't show, or don't care about what's goin' on in the hood."</h3>
+            <input type="radio" name="q6" value="a" id="q6a">Captain Dickson<br>
+            <input type="radio" name="q6" value="b" id="q6b">Doughboy<br>
+            <input type="radio" name="q6" value="c" id="q6c">Darius Stone<br>
+            <input type="radio" name="q6" value="c" id="q6d">Craig Jones<br>
+
+            <h3>7) "Why, you stuck-up, half-witted, scruffy-looking nerf herder."</h3>
+            <input type="radio" name="q7" value="a" id="q7a">Princess Leia Organa<br>
+            <input type="radio" name="q7" value="b" id="q7b">Mon Mothma<br>
+            <input type="radio" name="q7" value="c" id="q7c">Mia<br>
+            <input type="radio" name="q7" value="c" id="q7d">Debbie Reynolds<br>
+
+            <h3>8) "Greed, for the lack of a better word is, good."</h3>
+            <input type="radio" name="q8" value="a" id="q8a">Hank Pym<br>
+            <input type="radio" name="q8" value="b" id="q8b">Jack T. Colton<br>
+            <input type="radio" name="q8" value="c" id="q8c">Detective Nick Curran<br>
+            <input type="radio" name="q8" value="c" id="q8d">Gordon Gekko<br>
+
+            <h3>9) "You have that sharp, useless look about you."</h3>
+            <input type="radio" name="q9" value="a" id="q9a">Beatrice Ocean<br>
+            <input type="radio" name="q9" value="b" id="q9b">Vivian Ward<br>
+            <input type="radio" name="q9" value="c" id="q9c">Julianne Potter<br>
+            <input type="radio" name="q9" value="c" id="q9d">Maggie Carpenter<br>
+
+            <h3>10)"That's beautiful.  What is that, velvet?"</h3>
+            <input type="radio" name="q10" value="a" id="q10a">Axel Foley<br>
+            <input type="radio" name="q10" value="b" id="q10b">Rasputia Latimore<br>
+            <input type="radio" name="q10" value="c" id="q10c">Buddy Love<br>
+            <input type="radio" name="q10" value="c" id="q10d">Clarence the Barber<br>
+            <br><br>
+            <input type="submit" value="submit answers">
         </form>
 
-        <form class="questions" id="q2" data-question="2">
-            <h3>2. "To protect the sheep, you gott catch the wolf, and it takes a wolf to catch a wolf."</h3>
-            <ul>
-                <li> <input type="button" name="q2" value="Name 1"/></li>
-                <li> <input type="button" name="q2" value="Name 2"/></li>
-                <li> <input type="button" name="q2" value="Name 3"/></li>
-                <li> <input type="button" name="q2" value="Alonzo Harris played by Denzel Washington"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q3" data-question="3">
-            <h3>3. "Show me the money!"</h3>
-            <ul>
-                <li> <input type="button" name="q3" value="Jerry Maguire played by Tom Cruise"/></li>
-                <li> <input type="button" name="q3" value="Name 2"/></li>
-                <li> <input type="button" name="q3" value="Name3"/></li>
-                <li> <input type="button" name="q3" value="Name 4"/></li>                  
-            </ul>
-           
-        </form>
-
-        <form class="questions" id="q4" data-question="4">
-            <h3>4. "You got knocked the **** out!"</h3>
-            <ul>
-                <li> <input type="button" name="q4" value="Name 1"/></li>
-                <li> <input type="button" name="q4" value="Name 2"/></li>
-                <li> <input type="button" name="q4" value="Name 3"/></li>
-                <li> <input type="button" name="q4" value="Smokey played by Chris Tucker"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q5" data-question="5">
-            <h3>5. "Either they don't know, don't show, or don't care about what's goin' on in the hood."</h3>
-            <ul>
-                <li> <input type="button" name="q5" value="Name 1"/></li>
-                <li> <input type="button" name="q5" value="Doughboy played by Ice Cube"/></li>
-                <li> <input type="button" name="q5" value="Name 3"/></li>
-                <li> <input type="button" name="q5" value="Name 4"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q6" data-question="6">
-            <h3>6. "Why, you stuck-up, half-witted, scruffy-looking nerf herder."</h3>
-            <ul>
-                <li> <input type="button" name="q6" value="Name 1"/></li>
-                <li> <input type="button" name="q6" value="Name 2"/></li>
-                <li> <input type="button" name="q6" value="Name 3"/></li>
-                <li> <input type="button" name="q6" value="Princess Leia played by Carrie Fisher"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q7" data-question="7">
-            <h3>7. "Greed, for the lack of a better word is, good."?</h3>
-            <ul>
-                <li> <input type="button" name="q7" value="Gordon Gekko played by Michael Douglas"/></li>
-                <li> <input type="button" name="q7" value="Name 2"/></li>
-                <li> <input type="button" name="q7" value="Name 3"/></li>
-                <li> <input type="button" name="q7" value="Name 4"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q8" data-question="8">
-            <h3>8. "I'm gonna break through or somebody gonna break through to me."</h3>
-            <ul>
-                <li> <input type="button" name="q8" value="Name 1"/></li>
-                <li> <input type="button" name="q8" value="precious played by Gabourey Sidibe"/></li>
-                <li> <input type="button" name="q8" value="Name 3"/></li>
-                <li> <input type="button" name="q8" value="Name 4"/></li>                  
-            </ul>
-            
-        </form>
-
-        <form class="questions" id="q9" data-question="9">
-            <h3>9. "That's beautiful.  What is that- velvet?"</h3>
-            <ul>
-                <li> <input type="button" name="q9" value="Name 1"/></li>
-                <li> <input type="button" name="q9" value="Clarence the barber played by Eddie Murphy"/></li>
-                <li> <input type="button" name="q9" value="Name 3"/></li>
-                <li> <input type="button" name="q9" value="Name 4"/></li>                  
-            </ul>
-           
-        </form>
-
-        <form class="questions" id="q10" data-question="10">
-            <h3>10. "You have that sharp, useless look about you."</h3>
-            <ul>
-                <li> <input type="button" name="q10" value="Name 1"/></li>
-                <li> <input type="button" name="q10" value="Name 2"/></li>
-                <li> <input type="button" name="q10" value="Vivian Ward played by Julia Roberts"/></li>
-                <li> <input type="button" name="q10" value="Name 4"/></li>                  
-            </ul>
-            
-        </form>
-
-        <div id="results"></div><br>
-        
-        <!<button id="start-button"><!restart Game<!</button>
+    </div>
+</div> 
     
+
+
+        
+
+
+        
+        
     </div>
     <script src="assets/javascript/app.js"></script>
 </body>
