@@ -24,7 +24,7 @@ li{
 #start-button {
     height: 100px;
     width: 300px;
-    background-color: darksalmon;
+    
     cursor: pointer;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
