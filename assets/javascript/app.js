@@ -16,7 +16,6 @@
     ];
 		
 
-		
 		var questions =[
 
 			question1 = {
@@ -100,9 +99,6 @@
 			},
 
 		];			
-
-	
-		
 
 		$(document).ready(function() {
 
